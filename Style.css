@@ -16,9 +16,9 @@ html {
 
 body {
 
-    background: #F4F6F8;
+    background: #EAF2FA;
 
-    color: #333B45;
+    color: #173B63;
 
     font-family: Arial, Helvetica, sans-serif;
 
@@ -36,13 +36,15 @@ body {
 
     align-items: center;
 
-    border-bottom: 1px solid #eeeeee;
+    background: #102A43;
+
+    border-bottom: 1px solid #294B6B;
 
 }
 
 .logo {
 
-    color: #111111;
+    color: #B9DDF5;
 
     text-decoration: none;
 
@@ -60,20 +62,25 @@ nav {
 
     gap: 30px;
 
-    baground: #173B63;
-    
-
 }
 
 nav a {
 
-    color: #444444;
+    color: #D6E7F8;
 
     text-decoration: none;
 
     font-size: 11px;
 
     letter-spacing: 2px;
+
+    transition: 0.3s;
+
+}
+
+nav a:hover {
+
+    color: #65B8F0;
 
 }
 
@@ -95,7 +102,7 @@ nav a {
 
     background: #D6E7F8;
 
-    color: #2563A6
+    color: #2563A6;
 
 }
 
@@ -107,6 +114,8 @@ nav a {
 
     margin-bottom: 25px;
 
+    color: #2563A6;
+
 }
 
 .hero h1 {
@@ -117,7 +126,7 @@ nav a {
 
     letter-spacing: 12px;
 
-    color: #173b63;
+    color: #173B63;
 
 }
 
@@ -129,13 +138,15 @@ nav a {
 
     margin: 20px 0 35px;
 
+    color: #2563A6;
+
 }
 
 .shop-button {
 
     background: #2563A6;
 
-    color: #ffffff;
+    color: #FFFFFF;
 
     padding: 17px 40px;
 
@@ -151,7 +162,7 @@ nav a {
 
 .shop-button:hover {
 
-    background: #173B63;
+    background: #102A43;
 
 }
 
@@ -161,6 +172,8 @@ nav a {
 
     text-align: center;
 
+    background: #EAF2FA;
+
 }
 
 .section-label {
@@ -169,7 +182,7 @@ nav a {
 
     letter-spacing: 4px;
 
-    color: #888888;
+    color: #5B83A8;
 
     margin-bottom: 15px;
 
@@ -183,7 +196,7 @@ nav a {
 
     margin-bottom: 55px;
 
-    color: #2563A6;
+    color: #173B63;
 
 }
 
@@ -201,7 +214,7 @@ nav a {
 
     min-height: 210px;
 
-    border: 1px solid #dddddd;
+    border: 1px solid #B9D0E5;
 
     padding: 35px 25px;
 
@@ -209,7 +222,9 @@ nav a {
 
     text-decoration: none;
 
-    color: #111111;
+    color: #173B63;
+
+    background: #FFFFFF;
 
     display: flex;
 
@@ -223,9 +238,11 @@ nav a {
 
 .category-card:hover {
 
-    background: #111111;
+    background: #173B63;
 
-    color: #ffffff;
+    color: #FFFFFF;
+
+    border-color: #173B63;
 
 }
 
@@ -233,7 +250,13 @@ nav a {
 
     font-size: 12px;
 
-    color: #999999;
+    color: #5B83A8;
+
+}
+
+.category-card:hover span {
+
+    color: #B9DDF5;
 
 }
 
@@ -255,9 +278,9 @@ nav a {
 
 .about {
 
-    background: #2563A6;
+    background: #102A43;
 
-    color: #ffffff;
+    color: #FFFFFF;
 
     text-align: center;
 
@@ -273,13 +296,13 @@ nav a {
 
     margin-bottom: 20px;
 
-    color: #2563A6;
+    color: #B9DDF5;
 
 }
 
 .about p {
 
-    color: #cccccc;
+    color: #D6E7F8;
 
     font-size: 14px;
 
@@ -289,7 +312,7 @@ nav a {
 
 footer {
 
-    background: #ffffff;
+    background: #173B63;
 
     padding: 25px;
 
@@ -299,115 +322,6 @@ footer {
 
     letter-spacing: 2px;
 
-    color: #777777;
-
-}
-
-@media (max-width: 768px) {
-
-    .navbar {
-
-        height: auto;
-
-        padding: 25px 5%;
-
-        flex-direction: column;
-
-        gap: 20px;
-
-    }
-
-    nav {
-
-        gap: 18px;
-
-    }
-
-    nav a {
-
-        font-size: 9px;
-
-    }
-
-    .hero {
-
-        min-height: 480px;
-
-    }
-
-    .hero h1 {
-
-        letter-spacing: 5px;
-
-    }
-
-    .tagline {
-
-        font-size: 13px;
-
-    }
-
-    .collections {
-
-        padding: 70px 5%;
-
-    }
-
-    .collections h2 {
-
-        font-size: 24px;
-
-    }
-
-    .category-grid {
-
-        grid-template-columns: repeat(2, 1fr);
-
-        gap: 12px;
-
-    }
-
-    .category-card {
-
-        min-height: 170px;
-
-        padding: 20px 15px;
-
-    }
-
-    .category-card h3 {
-
-        font-size: 14px;
-
-    }
-
-    .about h2 {
-
-        font-size: 23px;
-
-    }
-
-    header.navbar {
-
-    background: #173B63;
-
-    color: #FFFFFF;
-
-}
-
-header.navbar a {
-
-    color: #FFFFFF;
-
-}
-}
-
-@media (max-width: 380px) {
-
-    .category-grid {
-
-        grid-template-columns: 1fr;
-
-    }
+    color: #D6E7F8;
 
 }
