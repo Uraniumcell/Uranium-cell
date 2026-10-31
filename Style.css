@@ -383,6 +383,19 @@ footer {
 
     }
 
+    header.navbar {
+
+    background: #173B63;
+
+    color: #FFFFFF;
+
+}
+
+header.navbar a {
+
+    color: #FFFFFF;
+
+}
 }
 
 @media (max-width: 380px) {
