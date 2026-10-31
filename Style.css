@@ -1,3 +1,15 @@
+:root {
+
+    --navy: #071426;
+
+    --blue: #63B8FF;
+
+    --electric: #3189D8;
+
+}
+
+/* GLOBAL */
+
 * {
 
     margin: 0;
@@ -12,25 +24,35 @@ html {
 
     scroll-behavior: smooth;
 
+    overflow-x: hidden;
+
 }
 
 body {
 
-    background: #EDF3FA;
+    width: 100%;
 
-    color: #102B50;
+    min-height: 100vh;
+
+    background: var(--navy);
+
+    color: var(--blue);
 
     font-family: Arial, Helvetica, sans-serif;
 
+    overflow-x: hidden;
+
 }
 
-/* NAVIGATION */
+/* NAVBAR */
 
 .navbar {
 
-    height: 85px;
+    width: 100%;
 
-    padding: 0 8%;
+    min-height: 85px;
+
+    padding: 20px 8%;
 
     display: flex;
 
@@ -38,17 +60,21 @@ body {
 
     align-items: center;
 
-    background: linear-gradient(135deg, #071426, #102B50, #071426);
+    flex-wrap: wrap;
 
-    border-bottom: 1px solid rgba(99, 184, 255, 0.35);
+    gap: 18px;
 
-    box-shadow: 0 4px 25px rgba(7, 20, 38, 0.35);
+    background: var(--navy);
+
+    border-bottom: 1px solid var(--electric);
+
+    box-shadow: 0 4px 25px rgba(49, 137, 216, 0.12);
 
 }
 
 .logo {
 
-    color: #B9DEFF;
+    color: var(--blue);
 
     text-decoration: none;
 
@@ -58,7 +84,7 @@ body {
 
     letter-spacing: 4px;
 
-    text-shadow: 0 0 15px rgba(99, 184, 255, 0.5);
+    text-shadow: 0 0 12px rgba(99, 184, 255, 0.3);
 
 }
 
@@ -66,13 +92,19 @@ nav {
 
     display: flex;
 
-    gap: 30px;
+    align-items: center;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 25px;
 
 }
 
 nav a {
 
-    color: #EDF3FA;
+    color: var(--blue);
 
     text-decoration: none;
 
@@ -80,15 +112,15 @@ nav a {
 
     letter-spacing: 2px;
 
-    transition: 0.3s;
+    transition: 0.3s ease;
 
 }
 
 nav a:hover {
 
-    color: #63B8FF;
+    color: var(--electric);
 
-    text-shadow: 0 0 12px #63B8FF;
+    text-shadow: 0 0 12px var(--blue);
 
 }
 
@@ -96,7 +128,11 @@ nav a:hover {
 
 .hero {
 
+    width: 100%;
+
     min-height: 600px;
+
+    padding: 60px 20px;
 
     display: flex;
 
@@ -108,15 +144,13 @@ nav a:hover {
 
     text-align: center;
 
-    padding: 60px 20px;
-
     background:
 
-        radial-gradient(ellipse at 50% 40%, rgba(48, 119, 190, 0.35), transparent 55%),
+        radial-gradient(circle at center, rgba(49, 137, 216, 0.18), transparent 65%),
 
-        linear-gradient(135deg, #071426, #102B50, #071426);
+        var(--navy);
 
-    color: #B9DEFF;
+    color: var(--blue);
 
 }
 
@@ -128,23 +162,27 @@ nav a:hover {
 
     margin-bottom: 25px;
 
-    color: #78C5FF;
+    color: var(--blue);
 
 }
 
 .hero h1 {
 
-    font-size: clamp(55px, 12vw, 120px);
+    max-width: 100%;
+
+    font-size: clamp(42px, 12vw, 120px);
 
     font-weight: 900;
 
     letter-spacing: 12px;
 
-    color: #EAF5FF;
+    color: var(--blue);
 
-    text-shadow: 0 0 10px rgba(99, 184, 255, 0.7),
+    text-shadow:
 
-                 0 0 30px rgba(99, 184, 255, 0.4);
+        0 0 12px rgba(99, 184, 255, 0.5),
+
+        0 0 30px rgba(99, 184, 255, 0.2);
 
 }
 
@@ -156,7 +194,7 @@ nav a:hover {
 
     margin: 20px 0 35px;
 
-    color: #B9DEFF;
+    color: var(--blue);
 
 }
 
@@ -164,9 +202,11 @@ nav a:hover {
 
 .shop-button {
 
-    background: linear-gradient(135deg, #63B8FF, #3189D8);
+    display: inline-block;
 
-    color: #071426;
+    background: var(--electric);
+
+    color: var(--navy);
 
     padding: 17px 40px;
 
@@ -176,17 +216,19 @@ nav a:hover {
 
     letter-spacing: 3px;
 
-    transition: 0.3s;
+    transition: 0.3s ease;
 
-    box-shadow: 0 0 20px rgba(99, 184, 255, 0.3);
+    border: 1px solid var(--blue);
+
+    box-shadow: 0 0 18px rgba(49, 137, 216, 0.25);
 
 }
 
 .shop-button:hover {
 
-    background: #B9DEFF;
+    background: var(--blue);
 
-    box-shadow: 0 0 30px rgba(99, 184, 255, 0.7);
+    box-shadow: 0 0 25px rgba(99, 184, 255, 0.4);
 
     transform: translateY(-3px);
 
@@ -196,11 +238,13 @@ nav a:hover {
 
 .collections {
 
+    width: 100%;
+
     padding: 100px 8%;
 
     text-align: center;
 
-    background: linear-gradient(180deg, #EDF3FA, #DCE9F6);
+    background: var(--navy);
 
 }
 
@@ -210,7 +254,7 @@ nav a:hover {
 
     letter-spacing: 4px;
 
-    color: #52799F;
+    color: var(--blue);
 
     margin-bottom: 15px;
 
@@ -224,7 +268,9 @@ nav a:hover {
 
     margin-bottom: 55px;
 
-    color: #102B50;
+    color: var(--blue);
+
+    text-shadow: 0 0 12px rgba(99, 184, 255, 0.2);
 
 }
 
@@ -234,7 +280,7 @@ nav a:hover {
 
     display: grid;
 
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
 
     gap: 20px;
 
@@ -242,9 +288,11 @@ nav a:hover {
 
 .category-card {
 
+    min-width: 0;
+
     min-height: 210px;
 
-    border: 1px solid #C3D8EB;
+    border: 1px solid var(--electric);
 
     padding: 35px 25px;
 
@@ -252,9 +300,9 @@ nav a:hover {
 
     text-decoration: none;
 
-    color: #102B50;
+    color: var(--blue);
 
-    background: rgba(255, 255, 255, 0.85);
+    background: var(--navy);
 
     display: flex;
 
@@ -262,21 +310,17 @@ nav a:hover {
 
     justify-content: space-between;
 
-    transition: 0.3s;
+    transition: 0.3s ease;
 
-    box-shadow: 0 8px 25px rgba(16, 43, 80, 0.06);
+    box-shadow: 0 5px 20px rgba(49, 137, 216, 0.08);
 
 }
 
 .category-card:hover {
 
-    background: linear-gradient(135deg, #102B50, #071426);
+    border-color: var(--blue);
 
-    color: #FFFFFF;
-
-    border-color: #63B8FF;
-
-    box-shadow: 0 0 25px rgba(99, 184, 255, 0.25);
+    box-shadow: 0 0 22px rgba(99, 184, 255, 0.25);
 
     transform: translateY(-5px);
 
@@ -286,13 +330,7 @@ nav a:hover {
 
     font-size: 12px;
 
-    color: #6487A8;
-
-}
-
-.category-card:hover span {
-
-    color: #B9DEFF;
+    color: var(--blue);
 
 }
 
@@ -310,25 +348,31 @@ nav a:hover {
 
     letter-spacing: 1px;
 
+    color: var(--blue);
+
 }
 
 /* TECH MEETS STYLE */
 
 .about {
 
+    width: 100%;
+
     background:
 
-        radial-gradient(ellipse at center, rgba(48, 119, 190, 0.25), transparent 65%),
+        radial-gradient(ellipse at center, rgba(49, 137, 216, 0.2), transparent 70%),
 
-        linear-gradient(135deg, #071426, #102B50);
+        var(--navy);
 
-    color: #FFFFFF;
+    color: var(--blue);
 
     text-align: center;
 
     padding: 90px 20px;
 
-    box-shadow: inset 0 1px 30px rgba(99, 184, 255, 0.08);
+    border-top: 1px solid rgba(49, 137, 216, 0.35);
+
+    border-bottom: 1px solid rgba(49, 137, 216, 0.35);
 
 }
 
@@ -340,19 +384,21 @@ nav a:hover {
 
     margin-bottom: 20px;
 
-    color: #B9DEFF;
+    color: var(--blue);
 
-    text-shadow: 0 0 15px rgba(99, 184, 255, 0.45);
+    text-shadow: 0 0 15px rgba(99, 184, 255, 0.4);
 
 }
 
 .about p {
 
-    color: #D6E9FA;
+    color: var(--blue);
 
     font-size: 14px;
 
     letter-spacing: 1px;
+
+    line-height: 1.8;
 
 }
 
@@ -360,7 +406,9 @@ nav a:hover {
 
 footer {
 
-    background: #071426;
+    width: 100%;
+
+    background: var(--navy);
 
     padding: 25px;
 
@@ -370,8 +418,200 @@ footer {
 
     letter-spacing: 2px;
 
-    color: #B9DEFF;
+    color: var(--blue);
 
-    border-top: 1px solid rgba(99, 184, 255, 0.3);
+    border-top: 1px solid var(--electric);
+
+}
+
+/* TABLETS */
+
+@media (max-width: 768px) {
+
+    .navbar {
+
+        justify-content: center;
+
+        padding: 20px 5%;
+
+    }
+
+    nav {
+
+        gap: 16px;
+
+    }
+
+    .hero {
+
+        min-height: 500px;
+
+    }
+
+    .hero h1 {
+
+        font-size: clamp(38px, 11vw, 70px);
+
+        letter-spacing: 5px;
+
+    }
+
+    .collections {
+
+        padding: 70px 5%;
+
+    }
+
+    .category-grid {
+
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    }
+
+    .category-card {
+
+        padding: 25px 18px;
+
+    }
+
+}
+
+/* MOBILE PHONES */
+
+@media (max-width: 480px) {
+
+    .navbar {
+
+        padding: 18px 12px;
+
+        gap: 18px;
+
+    }
+
+    .logo {
+
+        font-size: 22px;
+
+        letter-spacing: 3px;
+
+    }
+
+    nav {
+
+        width: 100%;
+
+        gap: 12px;
+
+    }
+
+    nav a {
+
+        font-size: 9px;
+
+        letter-spacing: 1px;
+
+    }
+
+    .hero {
+
+        min-height: 460px;
+
+        padding: 45px 15px;
+
+    }
+
+    .hero h1 {
+
+        font-size: clamp(32px, 10vw, 48px);
+
+        letter-spacing: 3px;
+
+        overflow-wrap: anywhere;
+
+    }
+
+    .subtitle {
+
+        font-size: 9px;
+
+        letter-spacing: 3px;
+
+    }
+
+    .tagline {
+
+        font-size: 13px;
+
+        line-height: 1.7;
+
+        letter-spacing: 1px;
+
+    }
+
+    .shop-button {
+
+        padding: 15px 28px;
+
+    }
+
+    .collections {
+
+        padding: 60px 18px;
+
+    }
+
+    .collections h2 {
+
+        font-size: 24px;
+
+        letter-spacing: 3px;
+
+        margin-bottom: 35px;
+
+    }
+
+    .category-grid {
+
+        grid-template-columns: minmax(0, 1fr);
+
+        gap: 15px;
+
+    }
+
+    .category-card {
+
+        min-height: 180px;
+
+        padding: 25px;
+
+    }
+
+    .about {
+
+        padding: 65px 18px;
+
+    }
+
+    .about h2 {
+
+        font-size: 23px;
+
+        letter-spacing: 3px;
+
+    }
+
+    .about p {
+
+        font-size: 13px;
+
+    }
+
+    footer {
+
+        padding: 22px 12px;
+
+        font-size: 9px;
+
+    }
 
 }
