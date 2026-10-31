@@ -16,13 +16,15 @@ html {
 
 body {
 
-    background: #EAF2FA;
+    background: #EDF3FA;
 
-    color: #173B63;
+    color: #102B50;
 
     font-family: Arial, Helvetica, sans-serif;
 
 }
+
+/* NAVIGATION */
 
 .navbar {
 
@@ -36,15 +38,17 @@ body {
 
     align-items: center;
 
-    background: #102A43;
+    background: linear-gradient(135deg, #071426, #102B50, #071426);
 
-    border-bottom: 1px solid #294B6B;
+    border-bottom: 1px solid rgba(99, 184, 255, 0.35);
+
+    box-shadow: 0 4px 25px rgba(7, 20, 38, 0.35);
 
 }
 
 .logo {
 
-    color: #B9DDF5;
+    color: #B9DEFF;
 
     text-decoration: none;
 
@@ -53,6 +57,8 @@ body {
     font-weight: 800;
 
     letter-spacing: 4px;
+
+    text-shadow: 0 0 15px rgba(99, 184, 255, 0.5);
 
 }
 
@@ -66,7 +72,7 @@ nav {
 
 nav a {
 
-    color: #D6E7F8;
+    color: #EDF3FA;
 
     text-decoration: none;
 
@@ -80,9 +86,13 @@ nav a {
 
 nav a:hover {
 
-    color: #65B8F0;
+    color: #63B8FF;
+
+    text-shadow: 0 0 12px #63B8FF;
 
 }
+
+/* HERO */
 
 .hero {
 
@@ -100,9 +110,13 @@ nav a:hover {
 
     padding: 60px 20px;
 
-    background: #D6E7F8;
+    background:
 
-    color: #2563A6;
+        radial-gradient(ellipse at 50% 40%, rgba(48, 119, 190, 0.35), transparent 55%),
+
+        linear-gradient(135deg, #071426, #102B50, #071426);
+
+    color: #B9DEFF;
 
 }
 
@@ -114,7 +128,7 @@ nav a:hover {
 
     margin-bottom: 25px;
 
-    color: #2563A6;
+    color: #78C5FF;
 
 }
 
@@ -126,7 +140,11 @@ nav a:hover {
 
     letter-spacing: 12px;
 
-    color: #173B63;
+    color: #EAF5FF;
+
+    text-shadow: 0 0 10px rgba(99, 184, 255, 0.7),
+
+                 0 0 30px rgba(99, 184, 255, 0.4);
 
 }
 
@@ -138,15 +156,17 @@ nav a:hover {
 
     margin: 20px 0 35px;
 
-    color: #2563A6;
+    color: #B9DEFF;
 
 }
 
+/* SHOP BUTTON */
+
 .shop-button {
 
-    background: #2563A6;
+    background: linear-gradient(135deg, #63B8FF, #3189D8);
 
-    color: #FFFFFF;
+    color: #071426;
 
     padding: 17px 40px;
 
@@ -158,13 +178,21 @@ nav a:hover {
 
     transition: 0.3s;
 
+    box-shadow: 0 0 20px rgba(99, 184, 255, 0.3);
+
 }
 
 .shop-button:hover {
 
-    background: #102A43;
+    background: #B9DEFF;
+
+    box-shadow: 0 0 30px rgba(99, 184, 255, 0.7);
+
+    transform: translateY(-3px);
 
 }
+
+/* COLLECTIONS */
 
 .collections {
 
@@ -172,7 +200,7 @@ nav a:hover {
 
     text-align: center;
 
-    background: #EAF2FA;
+    background: linear-gradient(180deg, #EDF3FA, #DCE9F6);
 
 }
 
@@ -182,7 +210,7 @@ nav a:hover {
 
     letter-spacing: 4px;
 
-    color: #5B83A8;
+    color: #52799F;
 
     margin-bottom: 15px;
 
@@ -196,9 +224,11 @@ nav a:hover {
 
     margin-bottom: 55px;
 
-    color: #173B63;
+    color: #102B50;
 
 }
+
+/* CATEGORY CARDS */
 
 .category-grid {
 
@@ -214,7 +244,7 @@ nav a:hover {
 
     min-height: 210px;
 
-    border: 1px solid #B9D0E5;
+    border: 1px solid #C3D8EB;
 
     padding: 35px 25px;
 
@@ -222,9 +252,9 @@ nav a:hover {
 
     text-decoration: none;
 
-    color: #173B63;
+    color: #102B50;
 
-    background: #FFFFFF;
+    background: rgba(255, 255, 255, 0.85);
 
     display: flex;
 
@@ -234,15 +264,21 @@ nav a:hover {
 
     transition: 0.3s;
 
+    box-shadow: 0 8px 25px rgba(16, 43, 80, 0.06);
+
 }
 
 .category-card:hover {
 
-    background: #173B63;
+    background: linear-gradient(135deg, #102B50, #071426);
 
     color: #FFFFFF;
 
-    border-color: #173B63;
+    border-color: #63B8FF;
+
+    box-shadow: 0 0 25px rgba(99, 184, 255, 0.25);
+
+    transform: translateY(-5px);
 
 }
 
@@ -250,13 +286,13 @@ nav a:hover {
 
     font-size: 12px;
 
-    color: #5B83A8;
+    color: #6487A8;
 
 }
 
 .category-card:hover span {
 
-    color: #B9DDF5;
+    color: #B9DEFF;
 
 }
 
@@ -276,15 +312,23 @@ nav a:hover {
 
 }
 
+/* TECH MEETS STYLE */
+
 .about {
 
-    background: #102A43;
+    background:
+
+        radial-gradient(ellipse at center, rgba(48, 119, 190, 0.25), transparent 65%),
+
+        linear-gradient(135deg, #071426, #102B50);
 
     color: #FFFFFF;
 
     text-align: center;
 
     padding: 90px 20px;
+
+    box-shadow: inset 0 1px 30px rgba(99, 184, 255, 0.08);
 
 }
 
@@ -296,13 +340,15 @@ nav a:hover {
 
     margin-bottom: 20px;
 
-    color: #B9DDF5;
+    color: #B9DEFF;
+
+    text-shadow: 0 0 15px rgba(99, 184, 255, 0.45);
 
 }
 
 .about p {
 
-    color: #D6E7F8;
+    color: #D6E9FA;
 
     font-size: 14px;
 
@@ -310,9 +356,11 @@ nav a:hover {
 
 }
 
+/* FOOTER */
+
 footer {
 
-    background: #173B63;
+    background: #071426;
 
     padding: 25px;
 
@@ -322,6 +370,8 @@ footer {
 
     letter-spacing: 2px;
 
-    color: #D6E7F8;
+    color: #B9DEFF;
+
+    border-top: 1px solid rgba(99, 184, 255, 0.3);
 
 }
